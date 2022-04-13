@@ -1,6 +1,16 @@
+import { useRouter } from "next/router";
+
 const Fab = () => {
+  const router = useRouter();
+  const handleOnclick = () => {
+    console.log("Click");
+    router.push("/newCheck");
+  };
   return (
-    <button class="p-0 w-10 h-10 bg-red-600 rounded-full hover:bg-red-700 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none">
+    <button
+      onClick={handleOnclick}
+      className="p-0 w-10 h-10 bg-red-600 rounded-full hover:bg-red-700 active:shadow-lg mouse shadow transition ease-in duration-200 focus:outline-none"
+    >
       <svg
         viewBox="0 0 20 20"
         enable-background="new 0 0 20 20"
